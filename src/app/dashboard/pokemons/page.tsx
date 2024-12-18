@@ -1,4 +1,4 @@
-import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/app/pokemons"
+import { PokemonsResponse,SimplePokemon, PokemonGrid } from "@/pokemons"
 
 
 
