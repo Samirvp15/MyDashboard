@@ -29,7 +29,7 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
                     <p className="pt-2 text-lg font-semibold text-gray-50 capitalize">{pokemon.name}</p>
                     <div className="mt-5">
                         <Link
-                            href={`/dashboard/pokemon/${pokemon.id}`}
+                            href={`/dashboard/pokemons/${pokemon.name}`}
                             className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-100"
                         >
                             Mas informacion
