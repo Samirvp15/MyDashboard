@@ -6,7 +6,18 @@ import { notFound } from "next/navigation";
 
 
 interface PokemonPageProps {
-    params: { id: string }
+    params: Promise<{ id: string }>
+}
+
+
+export async function generateStaticParams(){
+
+    const static151Pokemons = Array.from({ length: 151 }, (v, i) => `${i + 1}`)
+
+    return static151Pokemons.map(id => ({ 
+        id: id
+    }))
+
 }
 
 export async function generateMetadata({ params }: PokemonPageProps): Promise<Metadata> {
@@ -30,7 +41,11 @@ export async function generateMetadata({ params }: PokemonPageProps): Promise<Me
 
 const getPokemon = async (id: string): Promise<Pokemon> => {
     try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, {
+            next: {
+                revalidate: 60 * 60 *30 * 6
+            }
+        })
         const pokemon = await response.json()
         return pokemon
     } catch (error) {
