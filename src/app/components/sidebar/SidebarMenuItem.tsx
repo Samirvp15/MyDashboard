@@ -12,7 +12,7 @@ type SidebarMenuItemProps = {
     subTitle: string
 }
 
-export default function SidebarMenuItem({ path, icon, title, subTitle }: SidebarMenuItemProps) {
+export function SidebarMenuItem({ path, icon, title, subTitle }: SidebarMenuItemProps) {
 
     const pathName = usePathname() 
      
