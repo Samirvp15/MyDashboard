@@ -25,7 +25,7 @@ const getApiCounter = async (): Promise<CounterResponse> => {
 }
 
 
-export function CartCounter({ value = 0 }: CartCounterProps) {
+export function CartCounter({}: CartCounterProps) {
 
     const count = useAppSelector(state => state.counter.count)
     const dispatch = useAppDispatch()

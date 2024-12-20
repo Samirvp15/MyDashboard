@@ -12,14 +12,14 @@ import { IoHeartOutline } from "react-icons/io5"
 export function FavoritePokemons() {
 
     const favPokemons = useAppSelector(state => Object.values(state.pokemons))
-    const [pokemons, setPokemons] = useState(favPokemons)
+    const [pokemons] = useState(favPokemons)
 
     return (
         <>
 
             {
                 pokemons.length === 0
-                    ? (<NoFavorites />)
+                    ? (<NoFavorites />) 
                     : (<PokemonGrid pokemons={favPokemons} />)
             }
         </>
