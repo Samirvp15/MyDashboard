@@ -12,7 +12,7 @@ type PokemonGridProps = {
 export function PokemonGrid({ pokemons }: PokemonGridProps) {
     return (
         <>
-            <div className="flex flex-wrap gap-10 items-center justify-center">
+            <div className="flex flex-wrap  gap-10 items-center">
                 {pokemons.map(pokemon => (
 
                     <PokemonCard pokemon={pokemon} key={pokemon.id} />
