@@ -1,6 +1,7 @@
 import { FavoritePokemons } from "@/pokemons"
 
 
+
 export const metadata = {
     title: "Pokemons Favoritos",
     description: "Pagina de listado de pokemons favoritos"
@@ -15,7 +16,7 @@ export default function PokemonsPage() {
 
             <span className=" my-5 text-5xl">Listado de Pokemons Favoritos <small>Global State</small></span>
 
-           <FavoritePokemons/>
+            <FavoritePokemons />
         </div>
     )
 }

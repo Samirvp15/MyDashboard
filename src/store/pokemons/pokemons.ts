@@ -10,8 +10,8 @@ interface PokemonState {
 
 
 const initialState: PokemonState = {
-    '1': { id: '1', name: 'Bulbasaur' },
-    '2': { id: '2', name: 'Ivysaur' },
+    // '1': { id: '1', name: 'Bulbasaur' },
+    // '2': { id: '2', name: 'Ivysaur' },
 }
 
 const pokemonsSlice = createSlice({
@@ -21,7 +21,7 @@ const pokemonsSlice = createSlice({
         toogleFavorite(state, action: PayloadAction<SimplePokemon>) {
             const pokemon = action.payload
             const { id } = pokemon
-            if (state[id]) {
+            if (!!state[id]) {
                 delete state[id]
                 return
             } else {
