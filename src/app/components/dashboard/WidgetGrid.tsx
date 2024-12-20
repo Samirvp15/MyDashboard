@@ -19,6 +19,7 @@ export function WidgetGrid() {
                 subtitle="Productos Agregados"
                 label="Contador"
                 icon={ <IoCartOutline size={70} className=" text-blue-600" /> }
+                href="/dashboard/counter"
             />
 
         </div>
